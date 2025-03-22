@@ -1,7 +1,7 @@
 {
-  "name": "glitch-mvp-node",
+  "name": "shpxy-v2",
   "version": "0.1.0",
-  "description": "A simple Node app built on fastify, instantly up and running.",
+  "description": "SHPXY v2. Part of the SHPXY project built by avaluate.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
