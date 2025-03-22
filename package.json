@@ -4,9 +4,14 @@
   "description": "Evaluative Chronospiral technology.",
   "main": "server.js",
   "scripts": {
-    "start": "npm install express http-proxy-middleware request & node server.js"
+    "start": "node server.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.21.2",
+    "handlebars": "^4.7.8",
+    "http-proxy-middleware": "^3.0.3",
+    "request": "^2.88.2"
+  },
   "engines": {
     "node": "14.x"
   },
