@@ -3,7 +3,7 @@
 ![珍珠奶茶](https://resource02.ulifestyle.com.hk/ulcms/content/article/thumbnail/1280x720/uf/2160000/2161112/cover.jpg) 
 
 > 專治校園網路封鎖的「夜市雞排」級神器！  
-> 像喝珍奶一樣順暢瀏覽被Ban網站，連教官都查不到的黑科技！
+> 像喝珍奶一樣順暢瀏覽被Ban網站，連教官都查不到的黑科技！<br />
 > 就算是去重慶武漢吃麻辣燙也一樣好使!
 
 ---
