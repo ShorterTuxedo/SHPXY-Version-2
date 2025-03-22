@@ -1,6 +1,5 @@
 const url = ("https://" + process.env.PROJECT_DOMAIN + ".glitch.me");
 const port = 3000;
-const nezha = "aintnonezha.org 5555 nezhanezhanezha";
 const express = require("express");
 const app = express();
 var exec = require("child_process").exec;
@@ -26,27 +25,15 @@ app.get("/processes-status", (req, res) => {
   });
 });
 
-//啟動web
-app.get("/start-web", (req, res) => {
+//啟動spixy
+app.get("/start-spixy", (req, res) => {
   let cmdStr =
-    "chmod +x ./web.js && ./web.js -c ./config.json >/dev/null 2>&1 &";
+    "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.send("命令行執行錯誤 Command Status Error：" + err);
     } else {
       res.send("命令行執行結果 Command Status：" + "啟動成功 Start Success!");
-    }
-  });
-});
-
-//啟動哪吒
-app.get("/nezha-controller", (req, res) => {
-  let cmdStr = "/bin/bash nezha.sh " + nezha + " >/dev/null 2>&1 &";
-  exec(cmdStr, function (err, stdout, stderr) {
-    if (err) {
-      res.send("哪吒和敖丙客戶端部署錯誤 Nezha Controller Deploy Error：" + err);
-    } else {
-      res.send("哪吒和敖丙客戶端執行結果 Nezha Controller Run Result：" + "啟動成功 Start Success!");
     }
   });
 });
@@ -78,9 +65,9 @@ app.get("/test-fs", (req, res) => {
   });
 });
 
-//下載web可執行文件 Download Web Executable
-app.get("/download-web-executable", (req, res) => {
-  download_web_executable((err) => {
+//下載spixy可執行文件 Download spixy Executable
+app.get("/download-spixy-executable", (req, res) => {
+  download_spixy_executable((err) => {
     if (err) res.send("下載文件失敗");
     else res.send("下載文件成功");
   });
@@ -91,7 +78,7 @@ app.use(
   createProxyMiddleware({
     target: "http://127.0.0.1:8080/", // 需要跨域處理的請求地址
     changeOrigin: true, // 默認false，是否需要改變原始主機頭為目標URL
-    ws: true, // 是否代理websockets
+    ws: true, // 是否代理spixysockets
     pathRewrite: {
       // 請求中去除/
       "^/": "/",
@@ -113,63 +100,44 @@ function keepalive_baohuo() {
 
 
   exec("curl -m5 " + url + "/status", function (err, stdout, stderr) {
-    // 2.請求服務器進程狀態列表，若web沒在運行，則調起
+    // 2.請求服務器進程狀態列表，若spixy沒在運行，則調起
     if (!err) {
-      if (stdout.indexOf("./web.js -c ./config.json") != -1) {
-        console.log("web正在運行");
+      if (stdout.indexOf("./spixy.js -c ./config.json") != -1) {
+        console.log("spixy正在運行");
       } else {
-        //web未運行，命令行調起
+        //spixy未運行，命令行調起
         exec(
-          "chmod +x ./web.js && ./web.js -c ./config.json >/dev/null 2>&1 &",
+          "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &",
           function (err, stdout, stderr) {
             if (err) {
-              console.log("web保活-調起web-命令行執行錯誤 Web Keepalive web error：" + err);
+              console.log("spixy保活-調起spixy-命令行執行錯誤 spixy Keepalive spixy error：" + err);
             } else {
-              console.log("web保活-調起web-命令行執行成功 Web Keepalive Web Success!");
+              console.log("spixy保活-調起spixy-命令行執行成功 spixy Keepalive spixy Success!");
             }
           }
         );
       }
-    } else console.log("web保活-請求服務器進程表-命令行執行錯誤, Web keepalive server processes run errro: " + err);
-
-    // 3.請求服務器進程狀態列表，若哪吒和敖丙沒在運行，則調起
-    if (!err) {
-      if (stdout.indexOf("nezha-agent") != -1) {
-        console.log("哪吒和敖丙正在運行 Nezha is running");
-      } else {
-        //哪吒和敖丙未運行，命令行調起
-        exec(
-          "/bin/bash nezha.sh " + nezha + " >/dev/null 2>&1 &",
-          function (err, stdout, stderr) {
-            if (err) {
-              console.log("哪吒和敖丙保活-調起web-命令行執行錯誤：" + err);
-            } else {
-              console.log("哪吒和敖丙保活-調起web-命令行執行成功!");
-            }
-          }
-        );
-      }
-    } else console.log("哪吒和敖丙保活 NeZha keepalive-請求服務器進程表-命令行執行錯誤 Error grabbing server processes: " + err);
+    } else console.log("spixy保活-請求服務器進程表-命令行執行錯誤, spixy keepalive server processes run errro: " + err)
   });
 }
 setInterval(keepalive_baohuo, 9 * 1000);
 /* keepalive  end */
 
-// 初始化，下載web
-function download_web_executable(callback) {
-  let fileName = "web.js";
-  let web_url = "https://raw.githubusercontent.com/HappyLeslieAlexander/Ar" + "go-X" + "ray/refs/heads/main/w" + "e" + "b.js";
+// 初始化，下載spixy
+function download_spixy_executable(callback) {
+  let fileName = "spixy.js";
+  let spixy_url = "https://raw.githubusercontent.com/HappyLeslieAlexander/Ar" + "go-X" + "ray/refs/heads/main/w" + "e" + "b.js";
   let stream = fs.createWriteStream(path.join("./", fileName));
-  request(web_url)
+  request(spixy_url)
     .pipe(stream)
     .on("close", function (err) {
       if (err) callback("下載文件失敗 File Download Failed!");
       else callback(null);
     });
 }
-download_web((err) => {
-  if (err) console.log("初始化-下載web文件失敗 Initialisation, web download failed!");
-  else console.log("初始化-下載web文件成功 Initialisation, web download succeeded!");
+download_spixy((err) => {
+  if (err) console.log("初始化-下載spixy文件失敗 Initialisation, spixy download failed!");
+  else console.log("初始化-下載spixy文件成功 Initialisation, spixy download succeeded!");
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
