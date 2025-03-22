@@ -1,6 +1,6 @@
 # 🍜 校園快樂代理俠 (SHPXY v2) 使用秘笈 🚀
 
-![珍珠奶茶](https://resource02.ulifestyle.com.hk/ulcms/content/article/thumbnail/1280x720/uf/2160000/2161112/cover.jpg) 
+![珍珠奶茶](https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QnViYmxlJTIwbWlsayUyMHRlYSUyMFRhaXdhbnxlbnwwfHwwfHx8MA%3D%3D) 
 
 > 專治校園網路封鎖的「夜市雞排」級神器！  
 > 像喝珍奶一樣順暢瀏覽被Ban網站，連教官都查不到的黑科技！<br />
