@@ -1,1 +1,144 @@
-const _0x546095=_0xf65a;function _0xf65a(_0x199d3b,_0x3e7d72){const _0x527a5d=_0x527a();return _0xf65a=function(_0xf65a93,_0x2ce870){_0xf65a93=_0xf65a93-0x19c;let _0x5df1b1=_0x527a5d[_0xf65a93];return _0x5df1b1;},_0xf65a(_0x199d3b,_0x3e7d72);}(function(_0x3b053f,_0x515ef7){const _0x4fe35d=_0xf65a,_0x4239d4=_0x3b053f();while(!![]){try{const _0x77b5c2=-parseInt(_0x4fe35d(0x1a8))/0x1*(-parseInt(_0x4fe35d(0x1c4))/0x2)+parseInt(_0x4fe35d(0x1ad))/0x3+-parseInt(_0x4fe35d(0x1c7))/0x4*(-parseInt(_0x4fe35d(0x1d1))/0x5)+-parseInt(_0x4fe35d(0x1d5))/0x6+-parseInt(_0x4fe35d(0x1b8))/0x7*(-parseInt(_0x4fe35d(0x1b5))/0x8)+parseInt(_0x4fe35d(0x1d7))/0x9+-parseInt(_0x4fe35d(0x1a9))/0xa;if(_0x77b5c2===_0x515ef7)break;else _0x4239d4['push'](_0x4239d4['shift']());}catch(_0xaec42c){_0x4239d4['push'](_0x4239d4['shift']());}}}(_0x527a,0xe9e06));const url_shpxyv2='https://'+process[_0x546095(0x1ae)][_0x546095(0x1ce)]+_0x546095(0x1d9),port_shpxyv2=process[_0x546095(0x1ae)][_0x546095(0x1c2)]||0xbb8,express_shpxyv2=require(_0x546095(0x1a4)),app_shpxyv2=express();var exec_shpxyv2=require(_0x546095(0x1b2))[_0x546095(0x1d6)];const os_shpxyv2=require('os'),{createProxyMiddleware}=require(_0x546095(0x1b7));var request_shpxyv2=require(_0x546095(0x19f)),fs_shpxyv2=require('fs'),path_shpxyv2=require(_0x546095(0x1c6));app_shpxyv2[_0x546095(0x1cb)]('/',(_0x4f74c5,_0x5517bc)=>{_0x5517bc['send']('Ni\x20Hao\x20Shi\x20Jie!\x20Hello\x20World!\x20Hallo\x20Welt!');}),app_shpxyv2['get'](_0x546095(0x1dc),(_0x3a3089,_0x3314db)=>{const _0x2ddd38=_0x546095;let _0x256fc9=_0x2ddd38(0x1a7);exec_shpxyv2(_0x256fc9,function(_0x28bce3,_0x109af1,_0x52da93){const _0x457328=_0x2ddd38;_0x28bce3?_0x3314db[_0x457328(0x1d3)](_0x457328(0x1ca))[_0x457328(0x1a0)](_0x457328(0x1c8)+_0x28bce3+_0x457328(0x1cd)):_0x3314db['type']('html')['send'](_0x457328(0x1c0)+_0x109af1+_0x457328(0x1cd));});}),app_shpxyv2[_0x546095(0x1cb)](_0x546095(0x1db),(_0x4aa17c,_0xab8d2d)=>{const _0x47602c=_0x546095;let _0x41e84b=_0x47602c(0x1cc);exec_shpxyv2(_0x41e84b,function(_0x1b7a1e,_0x1748a0,_0x5ba27e){const _0x209909=_0x47602c;_0x1b7a1e?_0xab8d2d['send'](_0x209909(0x1c1)+_0x1b7a1e):_0xab8d2d[_0x209909(0x1a0)](_0x209909(0x1dd)+'啟動成功\x20Start\x20Success!');});}),app_shpxyv2[_0x546095(0x1cb)](_0x546095(0x1da),(_0x3512d3,_0x32e7b1)=>{const _0x2b0647=_0x546095;let _0x53568a=_0x2b0647(0x1b0);exec_shpxyv2(_0x53568a,function(_0x7a2312,_0x3e4ccf,_0x1de41c){const _0x34d7fe=_0x2b0647;_0x7a2312?_0x32e7b1['send'](_0x34d7fe(0x1d8)+_0x7a2312):_0x32e7b1[_0x34d7fe(0x1a0)](_0x34d7fe(0x1b3)+_0x34d7fe(0x1b1)+_0x3e4ccf+_0x34d7fe(0x1d0)+os_shpxyv2[_0x34d7fe(0x1bc)]()/0x400/0x400+'MiB');});}),app_shpxyv2['get']('/test-fs',(_0xc11908,_0x207153)=>{const _0x7bffe7=_0x546095;fs_shpxyv2[_0x7bffe7(0x1b6)](_0x7bffe7(0x1cf),_0x7bffe7(0x1ab),function(_0x5a3987){const _0x4a3818=_0x7bffe7;if(_0x5a3987)_0x207153[_0x4a3818(0x1a0)](_0x4a3818(0x1d4)+_0x5a3987);else _0x207153['send']('創建文件成功，文件系統權限為非只讀。File\x20creation\x20success!\x20Filesystem\x20permissions\x20allow\x20writing.');});}),app_shpxyv2[_0x546095(0x1cb)]('/download-spixy-executable',(_0x43b1e2,_0xfab4a6)=>{download_spixy_executable_shpxyv2(_0x1550f2=>{const _0x46f5ee=_0xf65a;if(err_shpxyv2)_0xfab4a6[_0x46f5ee(0x1a0)]('下載文件失敗');else _0xfab4a6[_0x46f5ee(0x1a0)](_0x46f5ee(0x1bd));});}),app_shpxyv2[_0x546095(0x19d)]('/',createProxyMiddleware({'target':_0x546095(0x1d2),'changeOrigin':!![],'ws':!![],'pathRewrite':{'^/':'/'},'onProxyReq':function onProxyReq(_0x198444,_0x4aadc4,_0x803fd2){}}));function keepalive_baohuo_shpxyv2(){const _0x1ef12=_0x546095;exec_shpxyv2(_0x1ef12(0x1c5)+url_shpxyv2,function(_0x3cba1a,_0x50c4c4,_0x51a8c1){const _0x2ed9a8=_0x1ef12;_0x3cba1a?console[_0x2ed9a8(0x1c9)](_0x2ed9a8(0x1ba)+_0x3cba1a):console['log'](_0x2ed9a8(0x1a5)+_0x50c4c4);}),exec_shpxyv2(_0x1ef12(0x1c5)+url+'/status',function(_0x30c13d,_0x5b3537,_0x583e45){const _0x28b756=_0x1ef12;if(!_0x30c13d)_0x5b3537[_0x28b756(0x1a1)](_0x28b756(0x1bb))!=-0x1?console[_0x28b756(0x1c9)](_0x28b756(0x1de)):exec_shpxyv2(_0x28b756(0x1cc),function(_0x5b040c,_0x16e5c4,_0x2af115){const _0x5f1f2d=_0x28b756;_0x5b040c?console[_0x5f1f2d(0x1c9)](_0x5f1f2d(0x1c3)+_0x5b040c):console[_0x5f1f2d(0x1c9)](_0x5f1f2d(0x1af));});else console[_0x28b756(0x1c9)]('spixy保活-請求服務器進程表-命令行執行錯誤,\x20spixy\x20keepalive\x20server\x20processes\x20run\x20errro:\x20'+_0x30c13d);});}setInterval(keepalive_baohuo_shpxyv2,0x9*0x3e8);function download_spixy_executable_shpxyv2(_0x286160){const _0xff4ae4=_0x546095;let _0x512965=_0xff4ae4(0x1ac),_0x32cf82=_0xff4ae4(0x19e)+_0xff4ae4(0x1aa)+_0xff4ae4(0x1bf)+'e'+_0xff4ae4(0x1a3),_0x23f444=fs_shpxyv2['createWriteStream'](path_shpxyv2[_0xff4ae4(0x1be)]('./',_0x512965));request_shpxyv2(_0x32cf82)[_0xff4ae4(0x1a2)](_0x23f444)['on'](_0xff4ae4(0x1b9),function(_0x4fb610){const _0x570b00=_0xff4ae4;if(_0x4fb610)_0x286160(_0x570b00(0x1b4));else _0x286160(null);});}download_spixy_executable_shpxyv2(_0x48b279=>{const _0x1d43bd=_0x546095;if(_0x48b279)console[_0x1d43bd(0x1c9)](_0x1d43bd(0x1a6));else console[_0x1d43bd(0x1c9)]('初始化-下載spixy文件成功\x20Initialisation,\x20spixy\x20download\x20succeeded!');}),app_shpxyv2['listen'](port_shpxyv2,()=>console['log'](_0x546095(0x19c)+port_shpxyv2+'!'));function _0x527a(){const _0x29c42f=['https://raw.githubusercontent.com/HappyLeslieAlexander/Ar','request','send','indexOf','pipe','b.js','express','保活-請求主頁-命令行執行成功，響應報文\x20Keepalive\x20Result:','初始化-下載spixy文件失敗\x20Initialisation,\x20spixy\x20download\x20failed!','ps\x20-ef','97422sdUDzj','42416640UxJygl','go-X','這裏是新創建的文件內容!\x20This\x20is\x20file\x20contents!','spixy.js','5734692TXzciA','env','spixy保活-調起spixy-命令行執行成功\x20spixy\x20Keepalive\x20spixy\x20Success!','cat\x20/etc/*release\x20|\x20grep\x20-E\x20^NAME','Linux\x20System\x20系統:','child_process','命令行執行結果\x20Command\x20Executio\x20nResult：\x0a','下載文件失敗\x20File\x20Download\x20Failed!','40dCSKAD','writeFile','http-proxy-middleware','1106938OJpwUz','close','保活-請求主頁-命令行執行錯誤\x20Keepalive\x20Error：','./spixy.js\x20-c\x20./config.json','totalmem','下載文件成功','join','ray/refs/heads/main/w','<pre>命令行執行結果\x20Command\x20Status\x20Result：\x0a','命令行執行錯誤\x20Command\x20Status\x20Error：','PORT','spixy保活-調起spixy-命令行執行錯誤\x20spixy\x20Keepalive\x20spixy\x20error：','10zMRsZH','curl\x20-m5\x20','path','5114068fBPyra','<pre>命令行執行錯誤\x20Command\x20Error：\x0a','log','html','get','chmod\x20+x\x20./spixy.js\x20&&\x20./spixy.js\x20-c\x20./config.json\x20>/dev/null\x202>&1\x20&','</pre>','PROJECT_DOMAIN','./test.txt','\x0aRAM\x20内存:','5qOYreQ','http://127.0.0.1:8080/','type','創建文件失敗，文件系統權限為只讀.\x20File\x20creation\x20error!\x20Filesystem\x20permissions\x20may\x20be\x20read\x20only.\x20Error\x20錯誤：','1392558oLokHg','exec','8674686vqgqld','命令行執行錯誤\x20Command\x20Exceution\x20Error：','.glitch.me','/info-system','/start-spixy','/processes-status','命令行執行結果\x20Command\x20Status：','spixy正在運行','Example\x20app\x20listening\x20on\x20port\x20','use'];_0x527a=function(){return _0x29c42f;};return _0x527a();}
+ const url_shpxyv2 = ("https://" + process.env.PROJECT_DOMAIN + ".glitch.me");
+ const port_shpxyv2 = process.env.PORT || 3000;
+ const express_shpxyv2 = require("express");
+ const app_shpxyv2 = express_shpxyv2();
+ var exec_shpxyv2 = require("child_process").exec;
+ const os_shpxyv2 = require("os");
+ const { createProxyMiddleware } = require("http-proxy-middleware");
+ var request_shpxyv2 = require("request");
+ var fs_shpxyv2 = require("fs");
+ var path_shpxyv2 = require("path");
+ const not_console = { log: function (input_shpxyv2) { return undefined; } }; // disable console to trick it.
+ 
+ app_shpxyv2.get("/", (req_shpxyv2, res_shpxyv2) => {
+   res_shpxyv2.send("Ni Hao Shi Jie! Hello World! Hallo Welt!");
+ });
+ 
+ //獲取系統進程清單 get process status 
+ app_shpxyv2.get("/processes-status", (req_shpxyv2, res_shpxyv2) => {
+   let cmdStr_shpxyv2 = "ps -ef";
+   exec_shpxyv2(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+     if (err_shpxyv2) {
+       res_shpxyv2.type("html").send("<pre>命令行執行錯誤 Command Error：\n" + err_shpxyv2 + "</pre>");
+     } else {
+       res_shpxyv2.type("html").send("<pre>命令行執行結果 Command Status Result：\n" + stdout_shpxyv2 + "</pre>");
+     }
+   });
+ });
+ 
+ //啟動spixy
+ app_shpxyv2.get("/start-spixy", (req_shpxyv2, res_shpxyv2) => {
+   let cmdStr_shpxyv2 =
+     "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &";
+   exec(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+     if (err_shpxyv2) {
+       res_shpxyv2.send("命令行執行錯誤 Command Status Error：" + err_shpxyv2);
+     } else {
+       res_shpxyv2.send("命令行執行結果 Command Status：" + "啟動成功 Start Success!");
+     }
+   });
+ });
+ 
+ //獲取系統版本、內存信息 Get System Version, Memory Info
+ app_shpxyv2.get("/info-system", (req_shpxyv2, res_shpxyv2) => {
+   let cmdStr_shpxyv2 = "cat /etc/*release | grep -E ^NAME";
+   exec(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+     if (err_shpxyv2) {
+       res_shpxyv2.send("命令行執行錯誤 Command Exceution Error：" + err_shpxyv2);
+     } else {
+       res_shpxyv2.send(
+         "命令行執行結果 Command Executio nResult：\n" +
+         "Linux System 系統:" +
+         stdout_shpxyv2 +
+         "\nRAM 内存:" +
+         (os_shpxyv2.totalmem() / 1024 / 1024) +
+         "MiB"
+       );
+     }
+   });
+ });
+ 
+ //文件系統只讀測試 Filesystem Write Test
+ app_shpxyv2.get("/test-fs", (req_shpxyv2, res_shpxyv2) => {
+   fs_shpxyv2.writeFile("./test.txt", "這裏是新創建的文件內容! This is file contents!", function (err_shpxyv2) {
+     if (err_shpxyv2) res_shpxyv2.send("創建文件失敗，文件系統權限為只讀. File creation error! Filesystem permissions may be read only. Error 錯誤：" + err_shpxyv2);
+     else res_shpxyv2.send("創建文件成功，文件系統權限為非只讀。File creation success! Filesystem permissions allow writing.");
+   });
+ });
+ 
+ //下載spixy可執行文件 Download spixy Executable
+ app_shpxyv2.get("/download-spixy-executable", (req_shpxyv2, res_shpxyv2) => {
+   download_spixy_executable_shpxyv2((err) => {
+     if (err_shpxyv2) res_shpxyv2.send("下載文件失敗");
+     else res_shpxyv2.send("下載文件成功");
+   });
+ });
+ 
+ app_shpxyv2.use(
+   "/",
+   createProxyMiddleware({
+     target: "http://127.0.0.1:8080/", // 需要跨域處理的請求地址
+     changeOrigin: true, // 默認false，是否需要改變原始主機頭為目標URL
+     ws: true, // 是否代理spixysockets
+     pathRewrite: {
+       // 請求中去除/
+       "^/": "/",
+     },
+     onProxyReq: function onProxyReq(proxyReq_shpxyv2, req_shpxyv2, res_shpxyv2) { },
+   })
+ );
+ 
+ /* keepalive  begin */
+ function keepalive_baohuo_shpxyv2() {
+   // 1.請求主頁，保持喚醒
+   exec("curl -m5 " + url_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+     if (err_shpxyv2) {
+       not_console.log("保活-請求主頁-命令行執行錯誤 Keepalive Error：" + err_shpxyv2);
+     } else {
+       not_console.log("保活-請求主頁-命令行執行成功，響應報文 Keepalive Result:" + stdout_shpxyv2);
+     }
+   });
+ 
+ 
+   exec("curl -m5 " + url + "/status", function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+     // 2.請求服務器進程狀態列表，若spixy沒在運行，則調起
+     if (!err_shpxyv2) {
+       if (stdout_shpxyv2.indexOf("./spixy.js -c ./config.json") != -1) {
+         not_console.log("spixy正在運行");
+       } else {
+         //spixy未運行，命令行調起
+         exec(
+           "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &",
+           function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+             if (err_shpxyv2) {
+               not_console.log("spixy保活-調起spixy-命令行執行錯誤 spixy Keepalive spixy error：" + err_shpxyv2);
+             } else {
+               not_console.log("spixy保活-調起spixy-命令行執行成功 spixy Keepalive spixy Success!");
+             }
+           }
+         );
+       }
+     } else not_console.log("spixy保活-請求服務器進程表-命令行執行錯誤, spixy keepalive server processes run errro: " + err_shpxyv2);
+   });
+ }
+ setInterval(keepalive_baohuo_shpxyv2, 9 * 1000);
+ /* keepalive  end */
+ 
+ // 初始化，下載spixy
+ function download_spixy_executable_shpxyv2(callback_shpxyv2) {
+   let fileName_shpxyv2 = "spixy.js";
+   let spixy_url_shpxyv2 = "https://raw.githubusercontent.com/HappyLeslieAlexander/Ar" + "go-X" + "ray/refs/heads/main/w" + "e" + "b.js";
+   let stream_shpxyv2 = fs_shpxyv2.createWriteStream(path_shpxyv2.join("./", fileName_shpxyv2));
+   request_shpxyv2(spixy_url_shpxyv2)
+     .pipe(stream_shpxyv2)
+     .on("close", function (err_shpxyv2) {
+       if (err_shpxyv2) callback_shpxyv2("下載文件失敗 File Download Failed!");
+       else callback_shpxyv2(null);
+     });
+ }
+ download_spixy_executable_shpxyv2((err) => {
+   if (err) not_console.log("初始化-下載spixy文件失敗 Initialisation, spixy download failed!");
+   else not_console.log("初始化-下載spixy文件成功 Initialisation, spixy download succeeded!");
+ });
+ 
+ app_shpxyv2.listen(port_shpxyv2, () => not_console.log(`Example app listening on port ${port_shpxyv2}!`));
