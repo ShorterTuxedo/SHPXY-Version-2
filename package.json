@@ -1,21 +1,17 @@
 {
-  "name": "shpxy-v2",
+  "name": "chronospiral-v2",
   "version": "0.1.0",
-  "description": "SHPXY v2. Part of the SHPXY project built by avaluate.",
+  "description": "Evaluative Chronospiral technology.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm install express http-proxy-middleware request & node server.js"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.6",
-    "request": "^2.88.2"
-  },
+  "dependencies": {},
   "engines": {
     "node": "14.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-mvp-node"
+    "url": "noglitchnololololololol"
   },
   "license": "MIT",
   "keywords": [
