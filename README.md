@@ -3,7 +3,7 @@
 
 > This is a continuation of Avaluate's SHPXY software started in 2021 by its cofounders. <br />
 > We hold Avaluate's spirit of freedom and transparency in technology, because we believe in a free and open Internet. <br />
-> This is SHPXY v2. It's fully open source, and completely free to deploy for **anyone**. <br />
+> This is SHPXY v2. It's fully open source, and completely free to deploy for **anyone**. Just fork the project, and deploy it onto Glitch. <br />
 > Works in Chongqing, Beijing, Wuhan, Shenzhen, and in School!
 
 ![珍珠奶茶](https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QnViYmxlJTIwbWlsayUyMHRlYSUyMFRhaXdhbnxlbnwwfHwwfHx8MA%3D%3D)  
