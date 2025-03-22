@@ -1,67 +1,45 @@
-# xray for Glitch
+# SHPXYv2（學校代理v2）使用指南 🎒💻
 
-## 项目特点
+## 專案亮點 🌟
+- **學生族群神器**：在[Glitch](https://glitch.com/)上一鍵搭建`vmess`/`vless`/`trojan`/`shadowsocks`節點，網課/查資料再也不怕斷網！
+- **哪吒監控小助手**：內建哪吒探針（自由開關），隨時查看伺服器狀態，比導師查勤還即時
+- **防牆指南**：如果連不上網，大概率是域名被牆了！建議給域名套個Cloudflare的「隱形斗篷」（CDN/Worker）
 
-* 本项目用于在 [Glitch](https://glitch.com/) 免费服务上部署 vmess / vless / trojan / shadowsocks 节点
-* 集成哪吒探针，可以自由选择是否安装
-* 部署完成如发现不能上网，请检查域名是否被墙，可使用 Cloudflare CDN 或者 worker 解决。
+## 部署教學 🛠️
+1. **註冊Glitch帳號**  
+   先去[Glitch官網](https://glitch.com/)搞個帳號，學生認證還能領Pro會員哦（別問，問就是福利）
 
-## 部署
+2. **配置文件修改大作戰**  
+   - `config.json`檔案：找到第14、52、69、100、128、157行，把UUID改成你自己的（就像給節點發身分證）
+   - `server.js`檔案：第4行填入哪吒參數（不會填？Google「哪吒探針配置教學」）
 
-* 注册 [Glitch](https://glitch.com/)
-* config.json 的 14、52、69、100、128 和 157 行修改 UUID
-* server.js 的第 4 行修改哪吒参数
-* 部署成功后 vmess / vless / trojan / shadowsocks ws 的路径为: `/协议名` (例如：vmess 的路径为 `/vmess`)，如要修改，可以在 `config.json` 文件中寻找并替换相对应的路径
+3. **魔性路徑設置**  
+   各協定預設路徑是`/協定名`（比如`/vmess`），想改路徑直接在`config.json`裡搜尋取代，建議改成`/homework`混淆老師（手動狗頭）
 
-* 需要应用的 URL 参数
-  | 命令 | 是否必须 | 说明 |
-  | ------------ | ------ | ------ |
-  | <URL>/start | 是 | 运行 xray |
-  | <URL>/nezha | 否 | 运行哪吒 | 以 / 开头 |
-  | <URL>/status | 否 | 查看后台进程  |
+4. **神奇指令**  
+   | 指令 | 是否必須 | 說明 |
+   |------|---------|------|
+   | `<你的URL>/start` | ✅ 必須 | 啟動代理服務（魔法開關） |
+   | `<你的URL>/nezha` | ❌ 可選 | 喚醒哪吒監控（導師模式） |
+   | `<你的URL>/status` | ❌ 可選 | 查看後台程序（裝逼必備） |
 
-![image](https://user-images.githubusercontent.com/92626977/212469541-9f1ceb5e-d525-4787-8142-0df4dafdbbe8.png)
+## 效果預覽 📸
+（此處插入原版所有圖片，但加上「僅供演示，請勿模仿」的搞笑浮水印）
 
-![image](https://user-images.githubusercontent.com/92626977/212469554-4ccd234c-8a49-4927-bada-2a8e947e9a37.png)
+## 特別鳴謝 🙌
+感謝Nike Jeff大佬的[trojan專案](https://github.com/hrzyang/glitch-trojan)，本專案是在他程式碼基礎上魔改的「學生特別版」
 
-![image](https://user-images.githubusercontent.com/92626977/212469562-5de97b9e-2d6f-41f1-9cea-fd2ade3df07b.png)
+## 免責聲明 🚫
+- 本專案僅供學習交流，24小時後請自覺刪除（就像網咖開機提示音）
+- 使用前請熟讀《網路安全法》，別拿去幹壞事（警察叔叔在看著你）
 
-![image](https://user-images.githubusercontent.com/92626977/212469659-76bacf83-423f-4625-894a-eadf2ee1a17d.png)
+## 請我喝珍珠奶茶 🧋
+如果本專案讓你成功「科學上網」，可以請我喝杯珍奶：  
+[愛發電贊助連結](https://afdian.net/a/Misaka-blog)  
+（學生族群量力而行，用餐廳的飯錢贊助會被打的）
 
-<img width="1232" alt="image" src="https://user-images.githubusercontent.com/92626977/212469743-f54c1122-d145-4db1-a78e-c94e0c41d169.png">
+---
 
-<img width="1175" alt="image" src="https://user-images.githubusercontent.com/92626977/212469767-073a170b-dbb3-49bf-bdac-57eba2eae324.png">
-
-<img width="1210" alt="image" src="https://user-images.githubusercontent.com/92626977/212470356-b3a03bf6-6484-4b43-ad75-671692c2be4b.png">
-
-<img width="1410" alt="image" src="https://user-images.githubusercontent.com/92626977/212469906-a2ff6091-4802-4492-b282-cf652b5b17e7.png">
-
-<img width="1467" alt="image" src="https://user-images.githubusercontent.com/92626977/212469937-bd448a4e-577c-4cac-9028-dfb8c9411e91.png">
-
-<img width="577" alt="image" src="https://user-images.githubusercontent.com/92626977/212469959-f2762c30-5cb1-4a31-9f77-0dad6319bd90.png">
-
-<img width="477" alt="image" src="https://user-images.githubusercontent.com/92626977/212470037-58621fe0-9f45-452e-97b4-419565920d61.png">
-
-<img width="593" alt="image" src="https://user-images.githubusercontent.com/92626977/212469999-af9685ff-3392-42f1-88bb-0e615a61ab9b.png">
-
-<img width="512" alt="image" src="https://user-images.githubusercontent.com/92626977/212470068-609dedea-2bfd-4ccf-80b2-6ed2a82e3dc5.png">
-
-<img width="1140" alt="image" src="https://user-images.githubusercontent.com/92626977/212470157-77b77f8c-dcb8-425e-81a4-83bc1881126c.png">
-
-<img width="499" alt="image" src="https://user-images.githubusercontent.com/92626977/212470733-446938ae-e403-424b-b7ce-51e775b30ed2.png">
-
-
-## 鸣谢
-
-大佬 Nike Jeff 的 trojan 项目，https://github.com/hrzyang/glitch-trojan ，在此基础上作修改。
-
-## 免责声明
-
-* 本程序仅供学习了解, 非盈利目的，请于下载后 24 小时内删除, 不得用作任何商业用途, 文字、数据及图片均有所属版权, 如转载须注明来源。
-* 使用本程序必循遵守部署免责声明。使用本程序必循遵守部署服务器所在地、所在国家和用户所在国家的法律法规, 程序作者不对使用者任何不当行为负责。
-
-## 赞助
-
-爱发电：https://afdian.net/a/Misaka-blog
-
-![afdian-MisakaNo の 小破站](https://user-images.githubusercontent.com/122191366/211533469-351009fb-9ae8-4601-992a-abbf54665b68.jpg)
+> ℹ️ 溫馨提示：  
+> 本指南含有大量虛構幽默元素，請以實際程式碼為準。  
+> 若被老師發現，請快速按`Ctrl+W`關閉頁面並喊「老師好！」
