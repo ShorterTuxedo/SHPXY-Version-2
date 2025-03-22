@@ -1,7 +1,6 @@
 const url = ("https://" + process.env.PROJECT_DOMAIN + ".glitch.me");
 const port = 3000;
-// 修改以下参数，以使用哪吒面板。格式为：服务器地址 端口 密钥
-const nezha = "server.forvps.eu.org 5555 dfzPfEOCA3DCAVhM4s"
+const nezha = "aintnonezha.org 5555 nezhanezhanezha";
 const express = require("express");
 const app = express();
 var exec = require("child_process").exec;
@@ -12,89 +11,89 @@ var fs = require("fs");
 var path = require("path");
 
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.send("Ni Hao Shi Jie! Hello World! Hallo Welt!");
 });
 
-//获取系统进程表
-app.get("/status", (req, res) => {
+//獲取系統進程清單 get process status 
+app.get("/processes-status", (req, res) => {
   let cmdStr = "ps -ef";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.type("html").send("<pre>命令行执行错误：\n" + err + "</pre>");
+      res.type("html").send("<pre>命令行執行錯誤 Command Error：\n" + err + "</pre>");
     } else {
-      res.type("html").send("<pre>命令行执行结果：\n" + stdout + "</pre>");
+      res.type("html").send("<pre>命令行執行結果 Command Status Result：\n" + stdout + "</pre>");
     }
   });
 });
 
-//启动web
-app.get("/start", (req, res) => {
+//啟動web
+app.get("/start-web", (req, res) => {
   let cmdStr =
     "chmod +x ./web.js && ./web.js -c ./config.json >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("命令行执行错误：" + err);
+      res.send("命令行執行錯誤 Command Status Error：" + err);
     } else {
-      res.send("命令行执行结果：" + "启动成功!");
+      res.send("命令行執行結果 Command Status：" + "啟動成功 Start Success!");
     }
   });
 });
 
-//启动nezha
-app.get("/nezha", (req, res) => {
+//啟動哪吒
+app.get("/nezha-controller", (req, res) => {
   let cmdStr = "/bin/bash nezha.sh " + nezha + " >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("哪吒客户端部署错误：" + err);
+      res.send("哪吒和敖丙客戶端部署錯誤 Nezha Controller Deploy Error：" + err);
     } else {
-      res.send("哪吒客户端执行结果：" + "启动成功!");
+      res.send("哪吒和敖丙客戶端執行結果 Nezha Controller Run Result：" + "啟動成功 Start Success!");
     }
   });
 });
 
-//获取系统版本、内存信息
-app.get("/info", (req, res) => {
+//獲取系統版本、內存信息 Get System Version, Memory Info
+app.get("/info-system", (req, res) => {
   let cmdStr = "cat /etc/*release | grep -E ^NAME";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("命令行执行错误：" + err);
+      res.send("命令行執行錯誤 Command Exceution Error：" + err);
     } else {
       res.send(
-        "命令行执行结果：\n" +
-        "Linux System:" +
+        "命令行執行結果 Command Executio nResult：\n" +
+        "Linux System 系統:" +
         stdout +
-        "\nRAM:" +
-        os.totalmem() / 1000 / 1000 +
-        "MB"
+        "\nRAM 内存:" +
+        (os.totalmem() / 1024 / 1024) +
+        "MiB"
       );
     }
   });
 });
 
-//文件系统只读测试
-app.get("/test", (req, res) => {
-  fs.writeFile("./test.txt", "这里是新创建的文件内容!", function (err) {
-    if (err) res.send("创建文件失败，文件系统权限为只读：" + err);
-    else res.send("创建文件成功，文件系统权限为非只读：");
+//文件系統只讀測試 Filesystem Write Test
+app.get("/test-fs", (req, res) => {
+  fs.writeFile("./test.txt", "這裏是新創建的文件內容! This is file contents!", function (err) {
+    if (err) res.send("創建文件失敗，文件系統權限為只讀. File creation error! Filesystem permissions may be read only. Error 錯誤：" + err);
+    else res.send("創建文件成功，文件系統權限為非只讀。File creation success! Filesystem permissions allow writing.");
   });
 });
 
-//下载web可执行文件
-app.get("/download", (req, res) => {
-  download_web((err) => {
-    if (err) res.send("下载文件失败");
-    else res.send("下载文件成功");
+//下載web可執行文件 Download Web Executable
+app.get("/download-web-executable", (req, res) => {
+  download_web_executable((err) => {
+    if (err) res.send("下載文件失敗");
+    else res.send("下載文件成功");
   });
 });
 
 app.use(
   "/",
   createProxyMiddleware({
-    target: "http://127.0.0.1:8080/", // 需要跨域处理的请求地址
-    changeOrigin: true, // 默认false，是否需要改变原始主机头为目标URL
+    target: "http://127.0.0.1:8080/", // 需要跨域處理的請求地址
+    changeOrigin: true, // 默認false，是否需要改變原始主機頭為目標URL
     ws: true, // 是否代理websockets
     pathRewrite: {
-      // 请求中去除/
+      // 請求中去除/
       "^/": "/",
     },
     onProxyReq: function onProxyReq(proxyReq, req, res) { },
@@ -102,75 +101,75 @@ app.use(
 );
 
 /* keepalive  begin */
-function keepalive() {
-  // 1.请求主页，保持唤醒
+function keepalive_baohuo() {
+  // 1.請求主頁，保持喚醒
   exec("curl -m5 " + url, function (err, stdout, stderr) {
     if (err) {
-      console.log("保活-请求主页-命令行执行错误：" + err);
+      console.log("保活-請求主頁-命令行執行錯誤 Keepalive Error：" + err);
     } else {
-      console.log("保活-请求主页-命令行执行成功，响应报文:" + stdout);
+      console.log("保活-請求主頁-命令行執行成功，響應報文 Keepalive Result:" + stdout);
     }
   });
 
 
   exec("curl -m5 " + url + "/status", function (err, stdout, stderr) {
-    // 2.请求服务器进程状态列表，若web没在运行，则调起
+    // 2.請求服務器進程狀態列表，若web沒在運行，則調起
     if (!err) {
       if (stdout.indexOf("./web.js -c ./config.json") != -1) {
-        console.log("web正在运行");
+        console.log("web正在運行");
       } else {
-        //web未运行，命令行调起
+        //web未運行，命令行調起
         exec(
           "chmod +x ./web.js && ./web.js -c ./config.json >/dev/null 2>&1 &",
           function (err, stdout, stderr) {
             if (err) {
-              console.log("web保活-调起web-命令行执行错误：" + err);
+              console.log("web保活-調起web-命令行執行錯誤 Web Keepalive web error：" + err);
             } else {
-              console.log("web保活-调起web-命令行执行成功!");
+              console.log("web保活-調起web-命令行執行成功 Web Keepalive Web Success!");
             }
           }
         );
       }
-    } else console.log("web保活-请求服务器进程表-命令行执行错误: " + err);
+    } else console.log("web保活-請求服務器進程表-命令行執行錯誤, Web keepalive server processes run errro: " + err);
 
-    // 3.请求服务器进程状态列表，若哪吒没在运行，则调起
+    // 3.請求服務器進程狀態列表，若哪吒和敖丙沒在運行，則調起
     if (!err) {
       if (stdout.indexOf("nezha-agent") != -1) {
-        console.log("哪吒正在运行");
+        console.log("哪吒和敖丙正在運行 Nezha is running");
       } else {
-        //哪吒未运行，命令行调起
+        //哪吒和敖丙未運行，命令行調起
         exec(
           "/bin/bash nezha.sh " + nezha + " >/dev/null 2>&1 &",
           function (err, stdout, stderr) {
             if (err) {
-              console.log("哪吒保活-调起web-命令行执行错误：" + err);
+              console.log("哪吒和敖丙保活-調起web-命令行執行錯誤：" + err);
             } else {
-              console.log("哪吒保活-调起web-命令行执行成功!");
+              console.log("哪吒和敖丙保活-調起web-命令行執行成功!");
             }
           }
         );
       }
-    } else console.log("哪吒保活-请求服务器进程表-命令行执行错误: " + err);
+    } else console.log("哪吒和敖丙保活 NeZha keepalive-請求服務器進程表-命令行執行錯誤 Error grabbing server processes: " + err);
   });
 }
-setInterval(keepalive, 9 * 1000);
+setInterval(keepalive_baohuo, 9 * 1000);
 /* keepalive  end */
 
-// 初始化，下载web
-function download_web(callback) {
+// 初始化，下載web
+function download_web_executable(callback) {
   let fileName = "web.js";
   let web_url = "https://cdn.glitch.me/53b1a4c6-ff7f-4b62-99b4-444ceaa6c0cd/web?v=1673588495643";
   let stream = fs.createWriteStream(path.join("./", fileName));
   request(web_url)
     .pipe(stream)
     .on("close", function (err) {
-      if (err) callback("下载文件失败");
+      if (err) callback("下載文件失敗 File Download Fialed!");
       else callback(null);
     });
 }
 download_web((err) => {
-  if (err) console.log("初始化-下载web文件失败");
-  else console.log("初始化-下载web文件成功");
+  if (err) console.log("初始化-下載web文件失敗 Initialisation, web download failed!");
+  else console.log("初始化-下載web文件成功 Initialisation, web download succeeded!");
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
