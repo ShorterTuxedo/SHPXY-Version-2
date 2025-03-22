@@ -1,4 +1,5 @@
- const url_shpxyv2 = ("https://" + process.env.PROJECT_DOMAIN + ".glitch.me");
+/***HERE SAVE THE DEOBFUSCATED VERSION!!!　**/
+const url_shpxyv2 = ("https://" + process.env.PROJECT_DOMAIN + ".glitch.me");
  const port_shpxyv2 = process.env.PORT || 3000;
  const express_shpxyv2 = require("express");
  const app_shpxyv2 = express_shpxyv2();
