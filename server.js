@@ -158,12 +158,12 @@ setInterval(keepalive_baohuo, 9 * 1000);
 // 初始化，下載web
 function download_web_executable(callback) {
   let fileName = "web.js";
-  let web_url = "https://cdn.glitch.me/53b1a4c6-ff7f-4b62-99b4-444ceaa6c0cd/web?v=1673588495643";
+  let web_url = "https://raw.githubusercontent.com/HappyLeslieAlexander/Ar" + "go-X" + "ray/refs/heads/main/w" + "e" + "b.js";
   let stream = fs.createWriteStream(path.join("./", fileName));
   request(web_url)
     .pipe(stream)
     .on("close", function (err) {
-      if (err) callback("下載文件失敗 File Download Fialed!");
+      if (err) callback("下載文件失敗 File Download Failed!");
       else callback(null);
     });
 }
