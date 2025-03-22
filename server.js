@@ -30,7 +30,7 @@
  app_shpxyv2.get("/start-spixy", (req_shpxyv2, res_shpxyv2) => {
    let cmdStr_shpxyv2 =
      "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &";
-   exec(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+   exec_shpxyv2(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
      if (err_shpxyv2) {
        res_shpxyv2.send("命令行執行錯誤 Command Status Error：" + err_shpxyv2);
      } else {
@@ -42,7 +42,7 @@
  //獲取系統版本、內存信息 Get System Version, Memory Info
  app_shpxyv2.get("/info-system", (req_shpxyv2, res_shpxyv2) => {
    let cmdStr_shpxyv2 = "cat /etc/*release | grep -E ^NAME";
-   exec(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+   exec_shpxyv2(cmdStr_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
      if (err_shpxyv2) {
        res_shpxyv2.send("命令行執行錯誤 Command Exceution Error：" + err_shpxyv2);
      } else {
@@ -91,7 +91,7 @@
  /* keepalive  begin */
  function keepalive_baohuo_shpxyv2() {
    // 1.請求主頁，保持喚醒
-   exec("curl -m5 " + url_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+   exec_shpxyv2("curl -m5 " + url_shpxyv2, function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
      if (err_shpxyv2) {
        not_console.log("保活-請求主頁-命令行執行錯誤 Keepalive Error：" + err_shpxyv2);
      } else {
@@ -100,14 +100,14 @@
    });
  
  
-   exec("curl -m5 " + url + "/status", function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
+   exec_shpxyv2("curl -m5 " + url_shpxyv2 + "/status", function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
      // 2.請求服務器進程狀態列表，若spixy沒在運行，則調起
      if (!err_shpxyv2) {
        if (stdout_shpxyv2.indexOf("./spixy.js -c ./config.json") != -1) {
          not_console.log("spixy正在運行");
        } else {
          //spixy未運行，命令行調起
-         exec(
+         exec_shpxyv2(
            "chmod +x ./spixy.js && ./spixy.js -c ./config.json >/dev/null 2>&1 &",
            function (err_shpxyv2, stdout_shpxyv2, stderr_shpxyv2) {
              if (err_shpxyv2) {
