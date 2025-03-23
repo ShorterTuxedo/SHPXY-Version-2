@@ -1,8 +1,8 @@
 # 🍜 校園快樂代理俠 (SHPXY v2) 🚀  
 # 🍜 KGV Firewall Destroyer (SHPXY v2) 🚀
 
-> This is a continuation of Avaluate's SHPXY software started in 2021 by its cofounders. <br />
-> We hold Avaluate's spirit of freedom and transparency in technology, because we believe in a free and open Internet. <br />
+> This is a continuation of SHPXY software started in 2021 by its cofounders. <br />
+> We hold its spirit of freedom and transparency in technology, because we believe in a free and open Internet. <br />
 > This is SHPXY v2. It's fully open source, and completely free to deploy for **anyone**. Just fork the project, and deploy it onto Glitch. <br />
 > Works in Chongqing, Beijing, Wuhan, Shenzhen, and in School!
 
